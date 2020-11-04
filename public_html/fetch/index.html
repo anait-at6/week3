@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>JS DOM</title><meta charset="utf-8">  
+ </head>
+ <body>
+  <article>        
+    <div>
+      <button onClick="this.textContent='Спасибо!'">Щелкни!</button>
+    </div>
+  </article>
+   <script>{
+  document.querySelector('button').addEventListener('click', ({target: t}) => t.textContent = 'Спасибо')
+}</script>
+ </body>
+</html>
