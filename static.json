@@ -1,10 +1,5 @@
 {  
-  "routes": {
-    "/promise/": "/promise/index.txt",
-    "/fetch/": "/fetch/index.html",
-    "/login/": "/login/index.txt"
-  },
-  "headers" : {
+   "headers" : {
     "/*" : {
       "X-Author" : "anait_at6",
       "Access-Control-Allow-Origin" : "*"
