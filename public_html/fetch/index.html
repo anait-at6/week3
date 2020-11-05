@@ -11,6 +11,7 @@ let response = await fetch(url.value);
 let text = await response.text(); // прочитать тело ответа как текст
  url.value =text ;
  // res.value =text.slice(0, 100)  ;
+ //size=100    value='https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits'    
 })()
   }
 </script>
@@ -18,7 +19,7 @@ let text = await response.text(); // прочитать тело ответа к
 <body>
 
 <form>
-  <br>URL:  <input id="inp" type=text name=textField size=100    value='https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits'>    
+  <br>URL:  <input id="inp" type=text name=textField >    
   
   <input id="bt" type=button onClick="getData();" value="Button"> 
   
