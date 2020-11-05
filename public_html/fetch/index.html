@@ -10,9 +10,11 @@ function getData(f) {
 <body>
 
 <form>
-<input type=text name=passField size=25>
-<input type=text name=textField size=25 value="fjjfj" disabled>
-<input type="button" value="Нажми меня" onClick="getData(this.form)">
+  <input id="inp" type=text name=textField size=50 value="fjjfj">
+  <button id="bt" onClick="getData(this.form)"> Button</button> 
+  <div>
+   <input type=text name=passField size=50  disabled>
+  </div>
 </form>
 
 </body>
