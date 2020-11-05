@@ -1,10 +1,7 @@
 <html>
 <head>
 <script language="JavaScript">
-function getData(f) {
-  f.passField.value=f.textField.value;
-}
-function getText() {
+  function getText() {
     let elem = document.getElementById("inp");
     let res =  document.getElementById("res");
     res.value=elem.value;
@@ -14,12 +11,11 @@ function getText() {
 <body>
 
 <form>
-  <br>URL<input id="inp" type=text name=textField size=50 value="fjjfj">
-  <button id="bt" onClick="getData(this.form)"> Button</button> 
-  <input id="bt2" type=button onClick="getData(this.form)" value="Button2"> 
-  <button onclick="getText();">blue</button>
+  <br>URL:  <input id="inp" type=text name=textField size=50 value="fjjfj">  
+  <input id="bt2" type=button onClick="getText();" value="Button"> 
+  <button id="bt" onClick="getText();"> Button2</button> 
   <p>
-   <br>"   "<input id="res" type=text name=passField size=50>
+   <br>   <input id="res" type=text name=passField size=50>
   </p>
 </form>
 
