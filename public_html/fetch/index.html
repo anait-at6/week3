@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html>
  <head>
-  <title>week3</title><meta charset="utf-8">  
+  <title>week3</title><meta charset="utf-8"> 
+  <script language="JavaScript">
+     function getData() {
+       alert("Вы ввели: " + document.forms[0].textField.value);
+     }
+  </script>
  </head>
  <body>
   <article>   
     <p> 
-       <input id="inp" type="text" >       
+       <input id="inp" type="text" name=textField size=45>       
     </p>
     <div>
-      <button id = "bt" onClick="this.textContent='Спасибо!'">Щелкни!</button>
+      <button id = "bt" onClick="getData()">Нажми меня</button>
     </div>
   </article>
    <script>{
