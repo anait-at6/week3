@@ -4,17 +4,22 @@
 function getData(f) {
   f.passField.value=f.textField.value;
 }
-
+function getText() {
+    let elem = document.getElementById("inp");
+    let res =  document.getElementById("res");
+    res.value=elem.value;
+  }
 </script>
 </head>
 <body>
 
 <form>
-  <br>Текст <input id="inp" type=text name=textField size=50 value="fjjfj">
+  <br>URL<input id="inp" type=text name=textField size=50 value="fjjfj">
   <button id="bt" onClick="getData(this.form)"> Button</button> 
   <input id="bt2" type=button onClick="getData(this.form)" value="Button2"> 
+  <button onclick="getText();">blue</button>
   <p>
-   <br>Результат<input type=text name=passField size=50>
+   <br>"   "<input id="res" type=text name=passField size=50>
   </p>
 </form>
 
