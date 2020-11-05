@@ -1,17 +1,25 @@
 <html>
 <head>
 <script language="JavaScript">
-  function getText() {
-    let elem = document.getElementById("inp");
+  function getData() {
+    let url = document.getElementById("inp");
     let res =  document.getElementById("res");
-    res.value=elem.value;
+    
+    let response = await fetch(url);
+    
+    if (response.ok) { // если HTTP-статус в диапазоне 200-299
+                       // получаем тело ответа (см. про этот метод ниже)
+       let res.value = await response.text();
+    } else {
+      alert("Ошибка HTTP: " + response.status);
+    }           
   }
 </script>
 </head>
 <body>
 
 <form>
-  <br>URL:  <input id="inp" type=text name=textField size=50 value="fjjfj">  
+  <br>URL:  <input id="inp" type=text name=textField size=50    value="https://kodaktor.ru/appver">  
   <input id="bt2" type=button onClick="getText();" value="Button"> 
   <button id="bt" onClick="getText();"> Button2</button> 
   <p>
@@ -21,3 +29,4 @@
 
 </body>
 </html>
+
