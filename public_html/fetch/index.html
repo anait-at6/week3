@@ -3,19 +3,22 @@
  <head>
   <title>week3</title><meta charset="utf-8"> 
   <script language="JavaScript">
-     function getData() {
-       alert("Вы ввели: " + document.forms[0].textField.value);
+     function getData(f) {
+       f.textField2.value = f.textField.value;
      }
   </script>
  </head>
  <body>
   <article>   
     <p> 
-       <input id="inp" type="text" name=textField size=45>       
+       <input id="inp" type="text" name=textField size=45  value ="ggjgl">       
     </p>
     <div>
-      <button id = "bt" onClick="getData()">Нажми меня</button>
+      <button id = "bt" onClick="getData(this.form)">Нажми меня</button>
     </div>
+   <p> 
+       <input id="inp2" type="text" name=textField2 size=45>       
+    </p>
   </article>
   
  </body>
