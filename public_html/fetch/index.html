@@ -1,25 +1,18 @@
-<!DOCTYPE html>
 <html>
- <head>
-  <title>week3</title><meta charset="utf-8"> 
-  <script language="JavaScript">
-     function getData(f) {
-       f.textField2.value = f.textField.value;
-     }
-  </script>
- </head>
- <body>
-  <article>   
-    <p> 
-       <input id="inp" type="text" name=textField size=45  value ="ggjgl">       
-    </p>
-    <div>
-      <button id = "bt" onClick="getData(this.form)">Нажми меня</button>
-    </div>
-   <p> 
-       <input id="inp2" type="text" name=textField2 size=45>       
-    </p>
-  </article>
-  
- </body>
+<head>
+<script language="JavaScript">
+function getData(f) {
+f.textField.value = f.passField.value
+}
+
+</script>
+</head>
+<body>
+
+<form>
+<input type=password name=passField size=25 onKeyUp="getData(this.form)">
+<input type=text name=textField size=25 disabled>
+</form>
+
+</body>
 </html>
