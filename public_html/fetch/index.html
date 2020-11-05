@@ -3,30 +3,29 @@
 <script language="JavaScript">
   function getData() {
     let url = document.getElementById("inp");
-    let res =  document.getElementById("res");
+   // let res =  document.getElementById("res");
     
-    let response = await fetch(url);
-    
-    if (response.ok) { // если HTTP-статус в диапазоне 200-299
-                       // получаем тело ответа (см. про этот метод ниже)
-       let res.value = await response.text();
-    } else {
-      alert("Ошибка HTTP: " + response.status);
-    }           
+   (async () => {
+let response = await fetch(url.value);
+
+let text = await response.text(); // прочитать тело ответа как текст
+ url.value =text ;
+ // res.value =text.slice(0, 100)  ;
+})()
   }
 </script>
 </head>
 <body>
 
 <form>
-  <br>URL:  <input id="inp" type=text name=textField size=50    value="https://kodaktor.ru/appver">  
-  <input id="bt2" type=button onClick="getText();" value="Button"> 
-  <button id="bt" onClick="getText();"> Button2</button> 
+  <br>URL:  <input id="inp" type=text name=textField size=100    value='https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits'>    
+  
+  <input id="bt" type=button onClick="getData();" value="Button"> 
+  /* <button id="bt2" onClick="getData();"> Не работает</button> 
   <p>
-   <input id="res" type=text name=passField size=50>
-  </p>
+   <input id="res" type=text name=passField size=300>
+  </p>  */
 </form>
 
 </body>
 </html>
-
